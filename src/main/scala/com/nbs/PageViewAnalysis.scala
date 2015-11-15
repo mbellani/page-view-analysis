@@ -16,8 +16,6 @@ object PageViewAnalysis {
   }
 
   def conf: SparkConf = {
-    new SparkConf()
-      .setAppName("page-count-analysis")
-      .setMaster("spark://Manishs-MBP.attlocal.net:7077")
+    new SparkConf().setAppName("page-view-analysis")
   }
 }

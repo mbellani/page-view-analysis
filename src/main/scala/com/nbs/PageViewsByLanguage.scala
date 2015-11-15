@@ -50,7 +50,7 @@ class PageViewsByLanguage(sc: SparkContext) extends Serializable {
       .option("inferSchema", "false")
       .option("delimiter", "|")
       .schema(schema)
-      .load("hdfs://localhost:9000/wikipedia/page-views.txt")
+      .load(sc.getConf.get("file.location"))
     df
   }
 
